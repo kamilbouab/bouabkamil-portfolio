@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <style>
+        /* --- DESIGN GÉNÉRAL (CSS) --- */
+        :root {
+            --primary-color: #2563eb; /* Bleu moderne */
+            --bg-color: #f8fafc;      /* Gris très clair */
+            --text-color: #1e293b;    /* Gris foncé lisible */
+            --card-bg: #ffffff;       /* Blanc pour les cartes */
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* En-tête (Header) */
+        header {
+            background-color: var(--card-bg);
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #64748b;
+        }
+
+        /* Structure principale */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        /* Section Projets (Cartes) */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* 1 colonne sur mobile */
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .projects-grid {
+                grid-template-columns: 1fr 1fr; /* 2 colonnes sur ordi */
+            }
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px); /* Petit effet au survol */
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        /* Section CV (Bouton) */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Pied de page */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ton Prénom Nom</h1>
+        <p>Développeur en formation / Ton Titre ici</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>
+                Bonjour ! Je suis passionné par l'informatique. 
+                Bienvenue sur mon portfolio. Ici, je présente mes travaux et mon parcours.
+                (Tu peux modifier ce texte pour parler un peu de toi).
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>Nom du Projet 1</h3>
+                    <p>
+                        Une courte description de ce que fait ce projet. 
+                        Par exemple : "Un site web créé pour une association..."
+                    </p>
+                    <p><strong>Technologies :</strong> HTML, CSS</p>
+                    <a href="#" style="color:var(--primary-color)">Voir le code &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Nom du Projet 2</h3>
+                    <p>
+                        Description de ton deuxième projet.
+                        Par exemple : "Un petit jeu calculatrice en Python..."
+                    </p>
+                    <p><strong>Technologies :</strong> Python, Tkinter</p>
+                    <a href="#" style="color:var(--primary-color)">Voir le code &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cv">
+            <h2>Mon CV</h2>
+            <p>Vous pouvez télécharger mon CV complet au format PDF en cliquant ci-dessous :</p>
+            
+            <a href="mon-cv.pdf" class="btn" target="_blank">Télécharger mon CV</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 - Fait avec passion.</p>
+    </footer>
+
+</body>
+</html>
