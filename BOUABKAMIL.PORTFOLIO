@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - BOUAB Kamil</title>
+    <style>
+        /* --- DESIGN PROFESSIONNEL (Gris & Moderne) --- */
+        :root {
+            --bg-color: #f1f5f9;       /* Gris clair professionnel (Slate) */
+            --header-bg: #1e293b;      /* Gris foncé presque bleu (Sérieux) */
+            --text-main: #334155;      /* Couleur du texte */
+            --accent-color: #2563eb;   /* Bleu roi pour les boutons */
+            --card-bg: #ffffff;        /* Blanc pur pour les blocs */
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* --- EN-TÊTE (HEADER) --- */
+        header {
+            background-color: var(--header-bg);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header .subtitle {
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            color: #cbd5e1; /* Gris très clair pour le sous-titre */
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- BOUTONS / ONGLETS DE NAVIGATION --- */
+        .header-actions {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-nav {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 50px; /* Bords ronds modernes */
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-nav:hover {
+            background-color: white;
+            color: var(--header-bg);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            color: white;
+        }
+
+        /* --- STRUCTURE PRINCIPALE --- */
+        .container {
+            max-width: 900px;
+            margin: -3rem auto 0; /* Remonte un peu sur le header */
+            padding: 0 1rem 3rem;
+            position: relative;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Ombre douce */
+            margin-bottom: 2rem;
+            scroll-margin-top: 2rem; /* Pour que le scroll s'arrête bien */
+        }
+
+        h2 {
+            color: var(--header-bg);
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        /* --- GRILLE DES PROJETS --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
+        }
+
+        .project-card h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BOUAB Kamil</h1>
+        <p class="subtitle">
+            Étudiant en deuxième année à l’ESIEA (cycle ingénieur).<br>
+            Recherche d’une alternance de 3 ans en informatique pour septembre 2026.<br>
+            <span style="font-size: 0.9rem; opacity: 0.8;">(Rythme : 2 semaines / 2 semaines)</span>
+        </p>
+
+        <div class="header-actions">
+            <a href="#cv" class="btn-nav btn-primary">Voir mon CV</a>
+            <a href="#projects" class="btn-nav">Voir mes projets</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section id="cv">
+            <h2>Mon CV</h2>
+            <p>
+                Actuellement en pleine formation d'ingénieur, je souhaite mettre mes compétences au service d'une entreprise innovante.
+                Vous pouvez consulter et télécharger mon CV détaillé ci-dessous.
+            </p>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="mon-cv.pdf" target="_blank" class="btn-nav btn-primary" style="display: inline-block;">
+                    📄 Télécharger le CV (PDF)
+                </a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Mes Projets</h2>
+            <p>Voici quelques réalisations académiques et personnelles.</p>
+            
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>Projet 1</h3>
+                    <p>Description de ton premier projet ici. Explique quel problème tu as résolu.</p>
+                    <p><strong>Technos :</strong> C, Python, ou autre...</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Projet 2</h3>
+                    <p>Description de ton deuxième projet ici.</p>
+                    <p><strong>Technos :</strong> HTML, CSS, JavaScript...</p>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 - BOUAB Kamil - Étudiant ESIEA</p>
+    </footer>
+
+</body>
+</html>
